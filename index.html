@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/base.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <title>黑龍~</title>
+    <link rel="icon" href="asset/icon.png" >
+
+</head>
+<body>
+    
+    <div class="box m-y">
+        <div class="row">
+            <div class="curtain"></div>
+            <h1> 生 日 快 乐！！</h1>
+            <p style="display: none">
+                To: 大狮姐 🦁
+            </p>
+        </div>
+
+        <img src="asset/test.png" alt="failed to load image" >
+
+        <div class="row slide" style="display: none;">
+            <p>
+                希望你会喜欢这简单的心意，看来设计不是我的强项。 见笑了~  不过。。还是祝你生日快乐！
+            </p>
+            <br>
+            <p><i>你心里的我~ 😎🐉</i></p>
+        </div>
+
+    </div>
+
+    <div class="wawa">
+        <img src="asset/wawa.png">
+    </div>
+
+
+    <script>
+
+        $(document).ready(function() {
+            
+            let curtain = $(".box .curtain").eq(0);
+            let brief = $(".slide").eq(0);
+            let wawa = $(".wawa").eq(0);
+
+            curtain.delay(500).animate({right: "-=69%"}, 360, function() {
+                $(".box p").eq(0).fadeIn(1000);
+                brief.delay(800).slideDown(1100);
+                $(this).css("display", "none");
+            } );
+
+
+            wawa.mousedown(function() {
+                alert("哇！你触碰到了陷阱！！开玩笑的啦~ 今天的你想当公主让我伺候你吗 ;)\n哈哈哈哈哈哈");
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
